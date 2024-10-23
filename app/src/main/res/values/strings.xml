@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FoundIT</string>
+    <string name="menu_drawer_open">Drawer Open</string>
+    <string name="menu_drawer_close">Drawer Close</string>
+    <string name="menu_drawer2_open">Drawer Open</string>
+    <string name="menu_drawer2_close">Drawer Close</string>
+</resources>
