@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single"
+        app:showAsAction="never">
 
         <item android:id="@+id/nav_s_claim_reqs"
             android:icon="@drawable/claim_req"
-            android:title="Claim Requests"/>
+            android:title="Claim Requests"
+            app:showAsAction="never"/>
 
         <item android:id="@+id/nav_s_claim_his"
             android:icon="@drawable/baseline_history_24"
-            android:title="Claim History"/>
+            android:title="Claim History"
+            app:showAsAction="never"/>
 
         <item android:id="@+id/nav_s_faqs"
             android:icon="@drawable/baseline_live_help_24"
-            android:title="FAQs" />
+            android:title="FAQs"
+            app:showAsAction="never"/>
     </group>
+
+    <item
+        android:id="@+id/nav_s_search"
+        android:title="Search"
+        android:icon="@drawable/baseline_manage_search_24"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_s_notif"
+        android:title="Nofication"
+        android:icon="@drawable/baseline_circle_notifications_24"
+        app:showAsAction="ifRoom" />
+
 </menu>

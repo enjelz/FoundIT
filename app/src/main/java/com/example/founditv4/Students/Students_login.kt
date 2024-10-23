@@ -1,5 +1,6 @@
 package com.example.founditv4.Students
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -12,7 +13,8 @@ import com.example.founditv4.R
 
 class Students_login : AppCompatActivity() {
 
-    lateinit var textInput: EditText
+    lateinit var txtName: EditText
+    lateinit var txtEmail: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,25 +26,19 @@ class Students_login : AppCompatActivity() {
             insets
         }
 
-        textInput = findViewById(R.id.s_name_input)
-        textInput = findViewById(R.id.s_username_input)
-        textInput = findViewById(R.id.s_password_input)
+        txtName = findViewById(R.id.s_name_input)
+        txtEmail = findViewById(R.id.s_email_input)
+
     }
     fun s_login_btn_click(view: View) {
-        val get_sName = findViewById<EditText>(R.id.s_name_input)
-        val s_sName = get_sName.text.toString()
 
-        val get_sUsername = findViewById<EditText>(R.id.s_username_input)
-        val s_username = get_sUsername.text.toString()
+        val sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("name", txtName.text.toString()) // Get text from txtName
+        editor.putString("email", txtEmail.text.toString()) // Get text from txtEmail
+        editor.apply()
 
-        val get_sPassword = findViewById<EditText>(R.id.s_password_input)
-        val s_password = get_sPassword.text.toString()
-
-        //val intent = Intent(this, MainActivity::class.java).aslo{
-        //it.putExtra("s_username", s_username)
-       // startActivity(it)
         val intent = Intent(this, StudentsHomepage::class.java)
         startActivity(intent)
-
     }
 }

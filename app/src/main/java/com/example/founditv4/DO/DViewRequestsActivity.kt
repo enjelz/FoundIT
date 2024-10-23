@@ -1,36 +1,21 @@
-package com.example.founditv4
+package com.example.founditv4.DO
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.founditv4.DO.DO_login
-import com.example.founditv4.Students.Students_login
+import com.example.founditv4.R
 
-class Welcome : AppCompatActivity() {
-
-
+class DViewRequestsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_welcome)
+        setContentView(R.layout.activity_dview_requests)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
     }
-    fun DOClicked(view: View){
-        val intent = Intent(this, DO_login::class.java)
-        startActivity(intent)
-    }
-    fun studentsClicked(view: View){
-        val intent = Intent(this, Students_login::class.java)
-        startActivity(intent)
-    }
-
 }

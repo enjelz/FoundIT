@@ -5,7 +5,228 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D6D0C8"
     tools:context=".Students.SFAQsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="383dp"
+        android:layout_height="710dp"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        app:cardBackgroundColor="#C1BCB5"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.188"
+        tools:ignore="DuplicateIds,MissingConstraints">
+
+        <TextView
+            android:id="@+id/s_faqs_txt_q1"
+            android:layout_width="242dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text=" • How do I claim an item?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_a1"
+            android:layout_width="242dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="50dp"
+            android:text="---------------------------"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_q2"
+            android:layout_width="351dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="90dp"
+            android:text=" • Do I need to go to the Disciplinary Office?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_a2"
+            android:layout_width="242dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="120dp"
+            android:text="---------------------------"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_q3"
+            android:layout_width="244dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="170dp"
+            android:text=" • How do I report a lost item?"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_a3"
+            android:layout_width="358dp"
+            android:layout_height="149dp"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="200dp"
+            android:text="If you find a lost item, you need to visit the Disciplinary Office (DO) in person. Provide them with details about the item, including where and when you found it, and any distinguishing features.  The office will record the information and assist with the process of returning the item to its rightful owner."
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_q4"
+            android:layout_width="wrap_content"
+            android:layout_height="57dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="350dp"
+            android:text=" • How do I know if my claim request has been approved?"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_a4"
+            android:layout_width="242dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="400dp"
+            android:text="---------------------------"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_q5"
+            android:layout_width="342dp"
+            android:layout_height="57dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="440dp"
+            android:text=" • How do I know if my claim request has been approved?"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_a5"
+            android:layout_width="242dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="490dp"
+            android:text="---------------------------"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_q6"
+            android:layout_width="342dp"
+            android:layout_height="57dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="520dp"
+            android:text=" • Can I track the status of my Claim Request?"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_a6"
+            android:layout_width="242dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="550dp"
+            android:text="---------------------------"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_q7"
+            android:layout_width="377dp"
+            android:layout_height="57dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="590dp"
+            android:text=" • Can I claim an item on behalf of someone else?"
+            android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+        <TextView
+            android:id="@+id/s_faqs_txt_a7"
+            android:layout_width="242dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="620dp"
+            android:text="---------------------------"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="62dp" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="242dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="28dp"
+        android:text="Frequently Asked Questions"
+        android:textAlignment="center"
+        android:textColor="#4D3B04"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 

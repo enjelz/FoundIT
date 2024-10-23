@@ -1,5 +1,7 @@
 package com.example.founditv4.DO
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -9,10 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.founditv4.R
+import com.example.founditv4.Students.StudentsHomepage
 
 class DO_login : AppCompatActivity() {
 
-    lateinit var textInput: EditText
+    lateinit var txtName: EditText
+    lateinit var txtEmail: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,23 +27,15 @@ class DO_login : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        textInput = findViewById(R.id.d_name_input)
-        textInput = findViewById(R.id.d_username_input)
-        textInput = findViewById(R.id.d_password_input)
+        txtName = findViewById(R.id.d_name_input)
+        txtEmail = findViewById(R.id.d_email_input)
     }
     fun d_login_btn_click(view: View) {
-        val get_dName = findViewById<EditText>(R.id.d_name_input)
-        val d_Name = get_dName.text.toString()
-
-        val get_dUsername = findViewById<EditText>(R.id.d_username_input)
-        val d_username = get_dUsername.text.toString()
-
-        val get_dPassword = findViewById<EditText>(R.id.d_password_input)
-        val d_password = get_dPassword.text.toString()
-
-        //val intent = Intent(this, MainActivity::class.java).also{
-        //it.putExtra("s_username", s_username)
-        // startActivity(it)
+        val sharedPreferences = getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("name", txtName.text.toString()) // Get text from txtName
+        editor.putString("email", txtEmail.text.toString()) // Get text from txtEmail
+        editor.apply()
 
         val intent = Intent(this, DOHomepage::class.java)
         startActivity(intent)
