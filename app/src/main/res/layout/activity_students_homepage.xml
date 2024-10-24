@@ -1,21 +1,450 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D6D0C8"
     tools:context=".Students.StudentsHomepage">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Students Homepage"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_itemname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Item Name"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/s_ch_txt_actualitemname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_datefound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="52dp"
+            android:text="Date Found"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:text="Description"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_datefound" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            app:srcCompat="@drawable/profile" />
+
+
+        <!--item1 ends here-->
+
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualitemname"
+            android:layout_width="74dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Umbrellla"
+            app:layout_constraintBottom_toTopOf="@+id/s_ch_txt_datefound"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toEndOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualdatefound"
+            android:layout_width="74dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="20dp"
+            android:text="10/21/24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_datefound" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualstatus"
+            android:layout_width="123dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="28dp"
+            android:text="Black and White"
+            app:layout_constraintBottom_toTopOf="@+id/s_ch_btn_view"
+            app:layout_constraintEnd_toEndOf="@+id/s_ch_txt_status"
+            app:layout_constraintHorizontal_bias="0.135"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_status"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/s_ch_btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#B4B4B0"
+            android:text="View"
+            android:onClick="btn_viewItem"
+            app:layout_constraintBottom_toTopOf="@+id/imageView_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/s_ch_btn_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#B4B4B0"
+            android:text="View"
+            android:onClick="btn_viewItem"
+            app:layout_constraintBottom_toTopOf="@+id/imageView_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_2"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateIds" />
+
+        <ImageView
+            android:id="@+id/imageView_2"
+            android:layout_width="163dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="304dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile" />
+
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_itemname2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Item Name"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView_2"
+            app:layout_constraintTop_toTopOf="@+id/imageView_2" />
+
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualitemname2"
+            android:layout_width="74dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="24dp"
+            android:text="Charger"
+            app:layout_constraintBottom_toTopOf="@+id/s_ch_txt_datefound2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView_2"
+            app:layout_constraintTop_toBottomOf="@+id/s_hmpaeg_txt_itemname2"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/s_ch_txt_datefound2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Date Found"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView_2"
+            app:layout_constraintTop_toTopOf="@+id/imageView_2"
+            app:layout_constraintVertical_bias="0.403" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualdatefound2"
+            android:layout_width="74dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="20dp"
+            android:text="10/20/24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.027"
+            app:layout_constraintStart_toEndOf="@+id/imageView_2"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_datefound2" />
+
+
+        <TextView
+            android:id="@+id/s_ch_txt_status2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Description"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.009"
+            app:layout_constraintStart_toEndOf="@+id/imageView_2"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_datefound2" />
+
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualstatus2"
+            android:layout_width="123dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:text="Type C / Pink"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView_2"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_status2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!--item2 ends here-->
+
+
+        <ImageView
+            android:id="@+id/imageView_3"
+            android:layout_width="163dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="540dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile" />
+
+        <ImageView
+            android:id="@+id/imageView_4"
+            android:layout_width="163dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="776dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/profile" />
+
+
+        <Button
+            android:id="@+id/s_ch_btn_view3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#B4B4B0"
+            android:onClick="btn_viewItem"
+            android:text="View"
+            app:layout_constraintBottom_toTopOf="@+id/imageView_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_3"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/s_ch_btn_view4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#B4B4B0"
+            android:text="View"
+            android:onClick="btn_viewItem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_4"
+            tools:ignore="DuplicateIds"/>
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_itemname3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Item Name"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/s_ch_txt_actualitemname3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.033"
+            app:layout_constraintStart_toEndOf="@+id/imageView_3"
+            app:layout_constraintTop_toTopOf="@+id/imageView_3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualitemname3"
+            android:layout_width="74dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="12dp"
+            android:text="Phone"
+            app:layout_constraintBottom_toTopOf="@+id/s_ch_txt_datefound3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toEndOf="@+id/imageView_3" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_datefound3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:text="Date Found"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView_3"
+            app:layout_constraintTop_toTopOf="@+id/imageView_3" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualdatefound3"
+            android:layout_width="74dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="20dp"
+            android:text="10/19/24"
+            app:layout_constraintBottom_toTopOf="@+id/s_ch_txt_status3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.034"
+            app:layout_constraintStart_toEndOf="@+id/imageView_3"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_datefound3"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_status3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:text="Description"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView_3"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_datefound3" />
+
+        <TextView
+            android:id="@+id/s_ch_txt_actualstatus3"
+            android:layout_width="157dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="24dp"
+            android:text="IPhone X / Black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView_3"
+            app:layout_constraintTop_toBottomOf="@+id/s_ch_txt_status3"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <!--item3 ends here-->
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_itemname4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toEndOf="@+id/imageView_4"
+            app:layout_constraintTop_toTopOf="@+id/imageView_4"
+            app:layout_constraintVertical_bias="0.007" />
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_datefound4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Found"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.145"
+            app:layout_constraintStart_toEndOf="@+id/imageView_4"
+            app:layout_constraintTop_toTopOf="@+id/imageView_4"
+            app:layout_constraintVertical_bias="0.441" />
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_actualitemname4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="16dp"
+            android:text="Pencil Case"
+            app:layout_constraintBottom_toTopOf="@+id/s_hmpaeg_txt_datefound4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.152"
+            app:layout_constraintStart_toEndOf="@+id/imageView_4"
+            app:layout_constraintTop_toBottomOf="@+id/s_hmpaeg_txt_itemname4"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_actualdatefound4"
+            android:layout_width="61dp"
+            android:layout_height="19dp"
+            android:text="10/18/24"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintStart_toEndOf="@+id/imageView_4"
+            app:layout_constraintTop_toBottomOf="@+id/s_hmpaeg_txt_datefound4"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_description4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:text="Description"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView_4"
+            app:layout_constraintTop_toBottomOf="@+id/s_hmpaeg_txt_actualdatefound4" />
+
+        <TextView
+            android:id="@+id/s_hmpaeg_txt_actualdescription4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="1dp"
+            android:text="Orange and Black"
+            app:layout_constraintBottom_toTopOf="@+id/s_ch_btn_view4"
+            app:layout_constraintEnd_toEndOf="@+id/s_hmpaeg_txt_description4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView_4"
+            app:layout_constraintTop_toBottomOf="@+id/s_hmpaeg_txt_description4"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

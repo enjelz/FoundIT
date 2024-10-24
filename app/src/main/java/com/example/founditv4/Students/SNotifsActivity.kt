@@ -4,20 +4,24 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.example.founditv4.R
 import com.example.founditv4.databinding.ActivitySfaqsBinding
+import com.example.founditv4.databinding.ActivitySnotifsBinding
 
-class SFAQsActivity : DrawerBaseActivity() {
+class SNotifsActivity : AppCompatActivity() {
 
-    lateinit var activitySfaqsBinding: ActivitySfaqsBinding
+    lateinit var activitySnotifs: ActivitySnotifsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sfaqs) // Provide layout resource ID
-        activitySfaqsBinding = ActivitySfaqsBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_snotifs) // Provide layout resource ID
+        activitySnotifs = ActivitySnotifsBinding.inflate(layoutInflater)
         enableEdgeToEdge()
 
-        allocatedActivityTitle("FAQs")
+        //allocatedActivityTitle("Notifications")
     }
     fun Home(view: View) {
         val intent = Intent(this, StudentsHomepage::class.java)

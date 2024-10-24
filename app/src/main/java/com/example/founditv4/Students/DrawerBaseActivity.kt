@@ -3,6 +3,7 @@ package com.example.founditv4.Students
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.FrameLayout
 import androidx.appcompat.widget.Toolbar
@@ -14,6 +15,7 @@ import com.google.android.material.navigation.NavigationView
 import android.view.View
 import android.widget.TextView
 import androidx.core.view.GravityCompat
+import androidx.core.view.isVisible
 import com.example.founditv4.Welcome
 
 
@@ -36,23 +38,6 @@ open class DrawerBaseActivity : AppCompatActivity(),
         setSupportActionBar(toolbar)
 
         menuInflater.inflate(R.menu.main_drawer_menu, toolbar.menu)
-
-        // Handle search and notification icon clicks
-        toolbar.setOnMenuItemClickListener { item ->
-            when (item.itemId) {
-                R.id.nav_s_search -> {
-                    // Handle search icon click
-                    true
-                }
-                R.id.nav_s_notif -> {
-                    // Handle notification icon click
-                    true
-                }
-                else -> false
-            }
-        }
-
-        // ... other code ...
 
         drawerLayout = findViewById(R.id.drawerLayout) // Initialize drawerLayout
 
@@ -111,7 +96,10 @@ open class DrawerBaseActivity : AppCompatActivity(),
                 startActivity(Intent(this, SFAQsActivity::class.java))
                 overridePendingTransition(0, 0)
             }
+
         }
         return false // or false, depending on your desired behavior
     }
+
+
 }

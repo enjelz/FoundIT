@@ -22,18 +22,5 @@
         <item android:id="@+id/nav_d_faqs"
             android:icon="@drawable/baseline_live_help_24"
             android:title="FAQs"/>
-
     </group>
-
-    <item
-        android:id="@+id/nav_d_search"
-        android:title="Search"
-        android:icon="@drawable/baseline_manage_search_24"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/nav_d_notif"
-        android:title="Nofication"
-        android:icon="@drawable/baseline_circle_notifications_24"
-        app:showAsAction="ifRoom" />
 </menu>

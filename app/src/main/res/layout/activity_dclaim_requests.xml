@@ -430,7 +430,7 @@
     <Button
         android:id="@+id/d_cr_btn_2"
         android:layout_width="66dp"
-        android:layout_height="31dp"
+        android:layout_height="35dp"
         android:backgroundTint="#FFFFFF"
         android:text="View"
         android:textAlignment="center"
@@ -548,5 +548,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.627" />
+    <Button
+        android:id="@+id/dclaim_reqs_home_btn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:textSize="15sp"
+        android:backgroundTint="#ADA192"
+        android:text="Home"
+        android:onClick="Home"
+        android:layout_marginTop="825dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

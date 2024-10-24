@@ -20,16 +20,6 @@
             app:showAsAction="never"/>
     </group>
 
-    <item
-        android:id="@+id/nav_s_search"
-        android:title="Search"
-        android:icon="@drawable/baseline_manage_search_24"
-        app:showAsAction="ifRoom" />
 
-    <item
-        android:id="@+id/nav_s_notif"
-        android:title="Nofication"
-        android:icon="@drawable/baseline_circle_notifications_24"
-        app:showAsAction="ifRoom" />
 
 </menu>

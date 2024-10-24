@@ -1,6 +1,9 @@
 package com.example.founditv4.Students
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import com.example.founditv4.R
 import com.example.founditv4.databinding.ActivitySclaimHistoryBinding
@@ -17,5 +20,9 @@ class SClaimHistoryActivity : DrawerBaseActivity() {
 
         allocatedActivityTitle("Your Claim History")
 
+    }
+    fun Home(view: View) {
+        val intent = Intent(this, StudentsHomepage::class.java)
+        startActivity(intent)
     }
 }
